@@ -1,8 +1,9 @@
-package guru.springframework.msscbrewery.web.model.v2;
+package guru.springframework.msscbrewery.domain;
 
-import java.time.OffsetDateTime;
+import java.sql.Timestamp;
 import java.util.UUID;
 
+import guru.springframework.msscbrewery.web.model.v2.BeerStyleEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,13 +13,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerDtoV2 {
-	
+public class Beer {
 	private UUID id;
 	private String beerName;
 	private BeerStyleEnum beerStyle;
 	private Long upc;
 	
-	private OffsetDateTime createdDate;
-	private OffsetDateTime lastUpdatedDate;
+	private Timestamp createdDate;
+	private Timestamp lastUpdatedDate;
 }
