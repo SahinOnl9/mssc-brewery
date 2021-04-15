@@ -20,7 +20,8 @@ public class BeerServiceV2Impl implements BeerServiceV2 {
 	@Override
 	public BeerDtoV2 saveNewBeer(BeerDtoV2 beerDto) {
 		log.debug("Api v2 post method..");
-		return null;
+		beerDto.setId(UUID.randomUUID());
+		return beerDto;
 	}
 
 	@Override
